@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>测试thymeleaf的使用</title>
+</head>
+
+<body>
+    <h1 th:text="${name}"></h1>
+
+    <hr/>
+
+    <div>
+        <a href="vipClick">VIP才能进入的内容</a><br/>
+    </div>
+
+    <div shiro:hasPermission="VIP">
+        <a href="vipSee">VIP才能看到的内容</a><br/>
+    </div>
+
+    <a href="toLogin">登录</a>
+</body>
+</html>

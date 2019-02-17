@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>login page</title>
+</head>
+<body>
+<h1>请注册</h1>
+
+<hr/>
+    <!--action对于controller中的请求-->
+    <form method="post" action="register">
+        手机号：<input type="text" name="telephoneNum"/><br/>
+        密码：<input type="text" name="password"/><br/>
+        验证码：<input type="text" name="identifyingCode"/><br/> <input type="submit" value="获取验证码"/>
+        <input type="submit" value="注册"/><h3 style="color:red" th:text="${register}"></h3>
+    </form>
+</body>
+</html>

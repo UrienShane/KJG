@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: kjg_demo
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    encoding:
+      charset: UTF-8
+
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.urien.kjg.domain
